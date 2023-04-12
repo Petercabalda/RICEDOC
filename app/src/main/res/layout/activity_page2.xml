@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".page2">
+    tools:context=".page2"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/title"
-        android:text="RICEDOC"
+        android:text="Ricedoc"
         android:textAlignment="center"
-        android:textSize="25dp"
-        android:layout_marginTop="20dp"/>
+        android:textSize="30dp"
+        android:layout_marginTop="25dp"
+        />
 
     <ImageView
         android:layout_width="300dp"
@@ -31,21 +33,31 @@
         android:text="Gallery"
         android:layout_below="@+id/imageView"
         android:id="@+id/selectBtn"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#4CAF50"
         />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Camera"
         android:textSize="20dp"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/selectBtn"
         android:id="@+id/captureBtn"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
-        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#4CAF50"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predict"
+        android:textSize="20dp"
+        android:layout_below="@+id/captureBtn"
+        android:id="@+id/predictBtn"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#4CAF50"
         />
 </RelativeLayout>
