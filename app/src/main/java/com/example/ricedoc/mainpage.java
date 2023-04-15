@@ -17,15 +17,16 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.io.IOException;
 
-public class page2 extends AppCompatActivity {
+public class mainpage extends AppCompatActivity {
 
-Button selectBtn,captureBtn, predictBtn;
 Bitmap bitmap;
 ImageView imageView;
+ImageButton captureBtn, galleryBtn, predictBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +34,16 @@ ImageView imageView;
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_page2);
+        setContentView(R.layout.mainpage);
 
         getPermission();
 
-        selectBtn = findViewById(R.id.selectBtn);
-        captureBtn = findViewById(R.id.captureBtn);
-        predictBtn = findViewById(R.id.predictBtn);
+        captureBtn = (ImageButton) findViewById(R.id.captureBtn);
+        galleryBtn = (ImageButton) findViewById(R.id.galleryBtn);
+        predictBtn = (ImageButton)  findViewById(R.id.predictBtn);
         imageView = findViewById(R.id.imageView);
 
-        selectBtn.setOnClickListener(new View.OnClickListener() {
+        galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -68,7 +69,7 @@ predictBtn.setOnClickListener(new View.OnClickListener() {
 void getPermission(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             if(checkSelfPermission(Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(page2.this, new String[]{Manifest.permission.CAMERA},11);
+                ActivityCompat.requestPermissions(mainpage.this, new String[]{Manifest.permission.CAMERA},11);
             }
         }
 }

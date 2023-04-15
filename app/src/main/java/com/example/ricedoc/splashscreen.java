@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class splashscreen extends AppCompatActivity {
 
     Timer timer;
     @Override
@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.splashscreen);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, page2.class);
+                Intent intent = new Intent(splashscreen.this, mainpage.class);
                 startActivity(intent);
                 finish();
             }
