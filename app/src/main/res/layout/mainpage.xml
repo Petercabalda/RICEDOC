@@ -70,19 +70,21 @@
         android:id="@+id/captureBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/imageView"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="capture"
         app:srcCompat="@drawable/capture_button" />
 
     <ImageButton
         android:id="@+id/galleryBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/captureBtn"
+        android:layout_centerHorizontal="true"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="gallery"
         app:srcCompat="@drawable/gallery_button" />
 
     <ImageButton
@@ -94,6 +96,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="49dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="predict"
         app:srcCompat="@drawable/predict_button" />
 
 
