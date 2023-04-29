@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-   <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,14 +14,20 @@
         android:theme="@style/Theme.RICEDOC"
         tools:targetApi="31">
         <activity
-            android:name=".mainpage"
+            android:name=".loadingscreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".description_brownspotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mainpageActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".splashscreen"
+            android:name=".splashscreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

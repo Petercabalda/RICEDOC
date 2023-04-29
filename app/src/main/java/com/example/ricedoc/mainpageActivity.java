@@ -16,17 +16,18 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.io.IOException;
 
-public class mainpage extends AppCompatActivity {
+public class mainpageActivity extends AppCompatActivity {
+
 
 Bitmap bitmap;
 ImageView imageView;
 ImageButton captureBtn, galleryBtn, predictBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +35,22 @@ ImageButton captureBtn, galleryBtn, predictBtn;
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        setContentView(R.layout.mainpage);
+        setContentView(R.layout.activity_mainpage);
 
         getPermission();
 
         captureBtn = (ImageButton) findViewById(R.id.captureBtn);
         galleryBtn = (ImageButton) findViewById(R.id.galleryBtn);
-        predictBtn = (ImageButton)  findViewById(R.id.predictBtn);
+        predictBtn = (ImageButton) findViewById(R.id.predictBtn);
         imageView = findViewById(R.id.imageView);
+
+        predictBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mainpageActivity.this,loadingscreenActivity.class);
+                startActivity(intent);
+            }
+        });
 
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,17 +68,18 @@ ImageButton captureBtn, galleryBtn, predictBtn;
                 startActivityForResult(intent, 12);
             }
         });
-predictBtn.setOnClickListener(new View.OnClickListener() {
+
+/**predictBtn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
     }
-});
+});**/
     }
 void getPermission(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             if(checkSelfPermission(Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(mainpage.this, new String[]{Manifest.permission.CAMERA},11);
+                ActivityCompat.requestPermissions(mainpageActivity.this, new String[]{Manifest.permission.CAMERA},11);
             }
         }
 }

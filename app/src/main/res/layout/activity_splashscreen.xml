@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splashscreen">
+    tools:context=".splashscreenActivity">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/logo"
+        app:srcCompat="@drawable/ricedoc_logo"
         tools:ignore="MissingConstraints"
          />
 </androidx.constraintlayout.widget.ConstraintLayout>
