@@ -48,8 +48,12 @@ public class mainpageActivity extends AppCompatActivity {
         predictBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mainpageActivity.this, loadingscreenActivity.class);
-                startActivity(intent);
+                if (bitmap != null) {
+                    Intent intent = new Intent(mainpageActivity.this, loadingscreenActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(mainpageActivity.this, "Please select an image first", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -70,11 +74,11 @@ public class mainpageActivity extends AppCompatActivity {
             }
         });
 
-/**predictBtn.setOnClickListener(new View.OnClickListener() {
-@Override public void onClick(View view) {
+        /**predictBtn.setOnClickListener(new View.OnClickListener() {
+        @Override public void onClick(View view) {
 
-}
-});**/
+        }
+        });**/
     }
 
     void getPermission() {
