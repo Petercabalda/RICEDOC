@@ -18,22 +18,23 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.IOException;
 
 public class mainpageActivity extends AppCompatActivity {
 
 
-Bitmap bitmap;
-ImageView imageView;
-ImageButton captureBtn, galleryBtn, predictBtn;
+    Bitmap bitmap;
+    ImageView imageView;
+    ImageButton captureBtn, galleryBtn, predictBtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mainpage);
 
@@ -47,7 +48,7 @@ ImageButton captureBtn, galleryBtn, predictBtn;
         predictBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mainpageActivity.this,loadingscreenActivity.class);
+                Intent intent = new Intent(mainpageActivity.this, loadingscreenActivity.class);
                 startActivity(intent);
             }
         });
@@ -70,25 +71,25 @@ ImageButton captureBtn, galleryBtn, predictBtn;
         });
 
 /**predictBtn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
+@Override public void onClick(View view) {
 
-    }
+}
 });**/
     }
-void getPermission(){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            if(checkSelfPermission(Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(mainpageActivity.this, new String[]{Manifest.permission.CAMERA},11);
+
+    void getPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(mainpageActivity.this, new String[]{Manifest.permission.CAMERA}, 11);
             }
         }
-}
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode==11){
-            if(grantResults.length>0){
-                if(grantResults[0]!=PackageManager.PERMISSION_GRANTED){
+        if (requestCode == 11) {
+            if (grantResults.length > 0) {
+                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                     this.getPermission();
                 }
             }
@@ -98,7 +99,7 @@ void getPermission(){
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(requestCode==10) {
+        if (requestCode == 10) {
             if (data != null) {
                 Uri uri = data.getData();
                 try {
@@ -108,12 +109,15 @@ void getPermission(){
                     e.printStackTrace();
                 }
             }
-        }
-        else if(requestCode==12){
-            bitmap = (Bitmap) data.getExtras().get("data");
-            imageView.setImageBitmap(bitmap);
+        } else if (requestCode == 12) {
+            if (data != null && data.getExtras() != null) {
+                bitmap = (Bitmap) data.getExtras().get("data");
+                imageView.setImageBitmap(bitmap);
+            } else {
+                // handle case where user cancelled image capture
+                Toast.makeText(this, "Image capture cancelled", Toast.LENGTH_SHORT).show();
+            }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-
 }
