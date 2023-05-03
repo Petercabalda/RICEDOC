@@ -1,13 +1,12 @@
 package com.example.ricedoc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class description_brownspotActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
+public class description_brownspot extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

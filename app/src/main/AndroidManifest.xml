@@ -18,6 +18,7 @@
             android:exported="false" />
         <activity
             android:name=".description_brownspotActivity"
+            android:parentActivityName=".mainpageActivity"
             android:exported="false" />
         <activity
             android:name=".mainpageActivity"

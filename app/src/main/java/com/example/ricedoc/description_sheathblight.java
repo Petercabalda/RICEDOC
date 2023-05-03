@@ -1,19 +1,18 @@
 package com.example.ricedoc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class description_brownspotActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
+public class description_sheathblight extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().setTitle("Description");
-        setContentView(R.layout.activity_description_brownspot);
+        setContentView(R.layout.description_sheathblight);
     }
 }
