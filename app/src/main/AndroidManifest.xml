@@ -21,6 +21,18 @@
             android:parentActivityName=".mainpageActivity"
             android:exported="false" />
         <activity
+            android:name=".description_sheathblight"
+            android:parentActivityName=".mainpageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".description_leafblast"
+            android:parentActivityName=".mainpageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".description_brownspot"
+            android:parentActivityName=".mainpageActivity"
+            android:exported="false" />
+        <activity
             android:name=".mainpageActivity"
             android:exported="false">
             <meta-data
