@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
+        android:background="#E1FDD2"
         app:srcCompat="@drawable/ricedoc_logo"
-        tools:ignore="MissingConstraints"
-         />
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

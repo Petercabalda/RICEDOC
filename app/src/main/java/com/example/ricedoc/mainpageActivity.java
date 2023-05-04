@@ -28,12 +28,14 @@ import java.io.IOException;
 
 public class mainpageActivity extends AppCompatActivity {
 
-BottomNavigationView bottomNavigationView;
-
     Bitmap bitmap;
     ImageView imageView;
     ImageButton captureBtn, galleryBtn, predictBtn;
+    private BottomNavigationView bottomNavigationView;
 
+    aboutFragment aboutFragment;
+    mainFragment mainFragment;
+    guideFragment guideFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,29 @@ BottomNavigationView bottomNavigationView;
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mainpage);
 
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.About:
+                        Intent aboutUsIntent = new Intent(mainpageActivity.this, aboutUsActivity.class);
+                        startActivity(aboutUsIntent);
+                        return true;
+                    case R.id.Main:
+                        Intent mainActivityIntent = new Intent(mainpageActivity.this, mainpageActivity.class);
+                        startActivity(mainActivityIntent);
+                        return true;
+                    case R.id.Guide:
+                        Intent guideIntent = new Intent(mainpageActivity.this, guideActivity.class);
+                        startActivity(guideIntent);
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
 
 
         getPermission();

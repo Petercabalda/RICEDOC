@@ -14,24 +14,30 @@
         android:theme="@style/Theme.RICEDOC"
         tools:targetApi="31">
         <activity
+            android:name=".guideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".aboutUsActivity"
+            android:exported="false" />
+        <activity
             android:name=".loadingscreenActivity"
             android:exported="false" />
         <activity
             android:name=".description_brownspotActivity"
-            android:parentActivityName=".mainpageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".mainpageActivity" />
         <activity
             android:name=".description_sheathblight"
-            android:parentActivityName=".mainpageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".mainpageActivity" />
         <activity
             android:name=".description_leafblast"
-            android:parentActivityName=".mainpageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".mainpageActivity" />
         <activity
             android:name=".description_brownspot"
-            android:parentActivityName=".mainpageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".mainpageActivity" />
         <activity
             android:name=".mainpageActivity"
             android:exported="false">

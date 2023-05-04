@@ -6,20 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".mainpageActivity"
     >
- <FrameLayout
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     android:id="@+id/container"
-     android:layout_above="@+id/bottom_navigation"
-     />
 
-<com.google.android.material.bottomnavigation.BottomNavigationView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/bottom_navigation"
-    android:layout_alignParentBottom="true"
-    app:menu="@menu/bottom_menu"
-    />
+   <FrameLayout
+       android:id="@+id/container"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_above="@+id/bottom_navigation"
+       android:background="#E1FDD2" />
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottom_navigation"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       app:itemIconTint="#52B91D"
+       app:itemRippleColor="#9DFA6D"
+       app:itemTextColor="#52B91D"
+       app:menu="@menu/bottom_menu" />
 
     <!--
     <Button
@@ -65,10 +68,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_height="280dp"
         android:layout_below="@+id/textlogo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="10dp"
         android:background="#EDEDED"
         android:contentDescription="@string/imagedisplay" />
 
@@ -78,53 +81,58 @@
         android:layout_height="75dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/textlogo"
         app:srcCompat="@drawable/ricedoc_textf" />
 
     <ImageView
         android:id="@+id/infoimage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:srcCompat="@drawable/infoimage" />
 
     <!-- CameraButton -->
     <ImageButton
         android:id="@+id/captureBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/infoimage"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#00FFFFFF"
-        android:layout_marginTop="15dp"
         android:contentDescription="@string/capture"
-        android:src="@drawable/capture_button"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:text="Capture"
+        android:textColor="#FFFFFF"
         app:srcCompat="@drawable/capture_button"
-        tools:src="@drawable/capture_button"
         tools:srcCompat="@drawable/capture_button" />
 
     <ImageButton
         android:id="@+id/galleryBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/captureBtn"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/gallery"
-        app:srcCompat="@drawable/gallery_button" />
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/gallery_button"
+        tools:srcCompat="@drawable/gallery_button" />
 
     <ImageButton
         android:id="@+id/predictBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/galleryBtn"
+        android:layout_alignBottom="@+id/container"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/predict"
+        android:scaleType="fitCenter"
         app:srcCompat="@drawable/predict_button" />
 
 
