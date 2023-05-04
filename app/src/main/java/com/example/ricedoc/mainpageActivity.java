@@ -33,7 +33,6 @@ public class mainpageActivity extends AppCompatActivity {
     private ImageButton captureBtn, galleryBtn, predictBtn;
     private BottomNavigationView bottomNavigationView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +40,8 @@ public class mainpageActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mainpage);
+
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -53,8 +54,6 @@ public class mainpageActivity extends AppCompatActivity {
                         startActivity(aboutUsIntent);
                         return true;
                     case R.id.Main:
-                        Intent mainActivityIntent = new Intent(mainpageActivity.this, mainpageActivity.class);
-                        startActivity(mainActivityIntent);
                         return true;
                     case R.id.Guide:
                         Intent guideIntent = new Intent(mainpageActivity.this, guideActivity.class);
@@ -73,6 +72,7 @@ public class mainpageActivity extends AppCompatActivity {
         galleryBtn = (ImageButton) findViewById(R.id.galleryBtn);
         predictBtn = (ImageButton) findViewById(R.id.predictBtn);
         imageView = findViewById(R.id.imageView);
+
 
         predictBtn.setOnClickListener(new View.OnClickListener() {
             @Override

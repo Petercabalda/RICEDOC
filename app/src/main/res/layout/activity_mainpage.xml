@@ -59,7 +59,9 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/predictBtn"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         app:itemIconTint="#52B91D"
         app:itemRippleColor="#9DFA6D"
@@ -87,6 +89,7 @@
         android:contentDescription="@string/textlogo"
         app:srcCompat="@drawable/ricedoc_textf" />
 
+
     <ImageView
         android:id="@+id/infoimage"
         android:layout_width="300dp"
@@ -97,45 +100,52 @@
         app:srcCompat="@drawable/infoimage" />
 
     <!-- CameraButton -->
-    <ImageButton
-        android:id="@+id/captureBtn"
-        android:layout_width="170dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/infoimage"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/capture"
-        android:cropToPadding="false"
-        android:scaleType="fitCenter"
-        android:text="Capture"
-        android:textColor="#FFFFFF"
-        app:srcCompat="@drawable/capture_button"
-        tools:srcCompat="@drawable/capture_button" />
+ <ImageButton
+     android:id="@+id/captureBtn"
+     android:layout_width="170dp"
+     android:layout_height="60dp"
+     android:layout_below="@+id/infoimage"
+     android:layout_centerHorizontal="true"
+     android:layout_marginTop="0dp"
+     android:layout_marginBottom="0dp"
+     android:backgroundTint="#00FFFFFF"
+     android:contentDescription="@string/capture"
+     android:cropToPadding="false"
+     android:scaleType="fitCenter"
+     android:text="Capture"
+     android:textColor="#FFFFFF"
+     app:srcCompat="@drawable/capture_button"
+     tools:srcCompat="@drawable/capture_button" />
 
+ <!-- Gallery Button -->
     <ImageButton
         android:id="@+id/galleryBtn"
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:layout_below="@+id/captureBtn"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/gallery"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/gallery_button"
         tools:srcCompat="@drawable/gallery_button" />
 
+    <!-- Predict Button -->
     <ImageButton
         android:id="@+id/predictBtn"
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:layout_below="@+id/galleryBtn"
-        android:layout_alignBottom="@+id/container"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/predict"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/predict_button" />
+        app:srcCompat="@drawable/predict_button"
+        tools:srcCompat="@drawable/predict_button" />
 
 
 

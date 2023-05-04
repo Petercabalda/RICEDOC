@@ -5,6 +5,9 @@
     <string name="capture">capture</string>
     <string name="gallery">gallery</string>
     <string name="predict">predict</string>
+    <string name="aboutus">About</string>
+    <string name="main">Main</string>
+    <string name="guide">Guide</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
