@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Camera"
-        android:icon="@drawable/ic_baseline_photo_camera_24"
-        android:id="@+id/camera"/>
+    <item android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/home"
+        />
+
+    <item android:title="About"
+        android:icon="@drawable/aboutlogo"
+        android:id="@+id/about"/>
+
+    <item android:title="Guide"
+        android:icon="@drawable/guide"
+        android:id="@+id/guide"/>
+
+
 </menu>
