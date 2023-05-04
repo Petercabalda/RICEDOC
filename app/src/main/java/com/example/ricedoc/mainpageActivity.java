@@ -28,14 +28,11 @@ import java.io.IOException;
 
 public class mainpageActivity extends AppCompatActivity {
 
-    Bitmap bitmap;
-    ImageView imageView;
-    ImageButton captureBtn, galleryBtn, predictBtn;
+    private Bitmap bitmap;
+    private ImageView imageView;
+    private ImageButton captureBtn, galleryBtn, predictBtn;
     private BottomNavigationView bottomNavigationView;
 
-    aboutFragment aboutFragment;
-    mainFragment mainFragment;
-    guideFragment guideFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
