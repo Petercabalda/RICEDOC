@@ -9,6 +9,8 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 
 public class aboutUsActivity extends AppCompatActivity {
@@ -17,6 +19,9 @@ public class aboutUsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_about_us);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
