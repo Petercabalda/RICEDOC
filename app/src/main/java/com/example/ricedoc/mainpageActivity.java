@@ -31,7 +31,7 @@ public class mainpageActivity extends AppCompatActivity {
     private Bitmap bitmap;
     private ImageView imageView;
     private ImageButton captureBtn, galleryBtn, predictBtn;
-    private BottomNavigationView bottomNavigationView;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +40,27 @@ public class mainpageActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mainpage);
+/**
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.Main:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
+                        return true;
+                    case R.id.About:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,aboutFragment).commit();
+                        return true;
+                    case R.id.Guide:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,guideFragment).commit();
+                        return true;
+                }
 
-
+                return false;
+            }
+        });**/
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,12 +70,14 @@ public class mainpageActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.About:
                         Intent aboutUsIntent = new Intent(mainpageActivity.this, aboutUsActivity.class);
+                        aboutUsIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(aboutUsIntent);
                         return true;
                     case R.id.Main:
                         return true;
                     case R.id.Guide:
                         Intent guideIntent = new Intent(mainpageActivity.this, guideActivity.class);
+                        guideIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(guideIntent);
                         return true;
                     default:

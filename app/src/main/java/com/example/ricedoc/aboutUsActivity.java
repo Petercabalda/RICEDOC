@@ -33,12 +33,14 @@ public class aboutUsActivity extends AppCompatActivity {
                         }**/
                         return true;
                     case R.id.Main:
-                        onBackPressed();
+                        Intent mainIntent = new Intent(aboutUsActivity.this, mainpageActivity.class);
+                        mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Add this line
+                        startActivity(mainIntent);
                         return true;
                     case R.id.Guide:
-                        Intent intent = new Intent(aboutUsActivity.this, guideActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                        startActivity(intent);
+                        Intent guideIntent = new Intent(aboutUsActivity.this, guideActivity.class);
+                        guideIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Add this line
+                        startActivity(guideIntent);
                         return true;
                     default:
                         return false;

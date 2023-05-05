@@ -26,12 +26,14 @@ public class guideActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.About:
-                        Intent intent = new Intent(guideActivity.this, aboutUsActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                        startActivity(intent);
+                        Intent aboutIntent = new Intent(guideActivity.this, aboutUsActivity.class);
+                        aboutIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(aboutIntent);
                         return true;
                     case R.id.Main:
-                        onBackPressed();
+                        Intent mainIntent = new Intent(guideActivity.this, mainpageActivity.class);
+                        mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(mainIntent);
                         return true;
                     case R.id.Guide:
                         return true;
