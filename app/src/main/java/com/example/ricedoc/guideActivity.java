@@ -3,6 +3,7 @@ package com.example.ricedoc;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -14,7 +15,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class guideActivity extends AppCompatActivity {
 
+
+
     private BottomNavigationView bottomNavigationView;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,8 @@ public class guideActivity extends AppCompatActivity {
             }
 
         });
+
+
 
     }
 }
