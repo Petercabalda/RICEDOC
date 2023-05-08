@@ -40,27 +40,6 @@ public class mainpageActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mainpage);
-/**
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.Main:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
-                        return true;
-                    case R.id.About:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,aboutFragment).commit();
-                        return true;
-                    case R.id.Guide:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,guideFragment).commit();
-                        return true;
-                }
-
-                return false;
-            }
-        });**/
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -124,11 +103,6 @@ public class mainpageActivity extends AppCompatActivity {
             }
         });
 
-        /**predictBtn.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View view) {
-
-        }
-        });**/
     }
 
     void getPermission() {
