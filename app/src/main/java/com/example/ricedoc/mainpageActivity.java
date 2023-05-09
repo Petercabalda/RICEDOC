@@ -28,9 +28,9 @@ import java.io.IOException;
 
 public class mainpageActivity extends AppCompatActivity {
 
-    private Bitmap bitmap;
+    private ImageButton captureBtn, galleryBtn;
     private ImageView imageView;
-    private ImageButton captureBtn, galleryBtn, predictBtn;
+    private Bitmap bitmap;
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -68,13 +68,14 @@ public class mainpageActivity extends AppCompatActivity {
 
         getPermission();
 
-        captureBtn = (ImageButton) findViewById(R.id.captureBtn);
-        galleryBtn = (ImageButton) findViewById(R.id.galleryBtn);
-        predictBtn = (ImageButton) findViewById(R.id.predictBtn);
         imageView = findViewById(R.id.imageView);
+        captureBtn = findViewById(R.id.captureBtn);
+        galleryBtn = findViewById(R.id.galleryBtn);
+       /* predictBtn = (ImageButton) findViewById(R.id.predictBtn);*/
+       /* imageView = findViewById(R.id.imageView);*/
 
 
-        predictBtn.setOnClickListener(new View.OnClickListener() {
+       /* predictBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (bitmap != null) {
@@ -85,24 +86,23 @@ public class mainpageActivity extends AppCompatActivity {
                 }
             }
         });
-
+*/
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setAction(intent.ACTION_GET_CONTENT);
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
-                startActivityForResult(intent, 10);
-            }
-        });
-        captureBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 12);
+                startActivityForResult(intent, 1);
             }
         });
 
+        captureBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, 2);
+            }
+        });
     }
 
     void getPermission() {
@@ -127,25 +127,25 @@ public class mainpageActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == 10) {
-            if (data != null) {
-                Uri uri = data.getData();
-                try {
-                    bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
-                    imageView.setImageBitmap(bitmap);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else if (requestCode == 12) {
-            if (data != null && data.getExtras() != null) {
-                bitmap = (Bitmap) data.getExtras().get("data");
-                imageView.setImageBitmap(bitmap);
-            } else {
-                // handle case where user cancelled image capture
-                Toast.makeText(this, "Image capture cancelled", Toast.LENGTH_SHORT).show();
-            }
-        }
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            Uri uri = data.getData();
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                imageView.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (requestCode == 2 && resultCode == RESULT_OK && data != null) {
+            bitmap = (Bitmap) data.getExtras().get("data");
+            imageView.setImageBitmap(bitmap);
+        }
+
+        if (bitmap != null) {
+            Intent intent = new Intent(this, loadingscreenActivity.class);
+            intent.putExtra("image", bitmap);
+            startActivity(intent);
+        }
     }
 }

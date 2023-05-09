@@ -25,15 +25,14 @@
         app:itemTextColor="#52B91D"
         app:menu="@menu/bottom_menu" />
 
-    <ImageView
+  <!--  <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="280dp"
-        android:layout_below="@+id/textlogo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/textlogo"
         android:background="#EDEDED"
-        android:contentDescription="@string/imagedisplay" />
+        android:contentDescription="@string/imagedisplay" />-->
 
     <ImageView
         android:id="@+id/textlogo"
@@ -41,27 +40,30 @@
         android:layout_height="75dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/textlogo"
         app:srcCompat="@drawable/ricedoc_textf" />
 
 
-    <ImageView
+  <!--  <ImageView
         android:id="@+id/infoimage"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/infoimage" />
+        app:srcCompat="@drawable/infoimage" />-->
 
     <!-- CameraButton -->
     <ImageButton
         android:id="@+id/captureBtn"
         android:layout_width="170dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/infoimage"
+        android:layout_below="@+id/textlogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
@@ -90,6 +92,7 @@
         tools:srcCompat="@drawable/gallery_button" />
 
     <!-- Predict Button -->
+<!--
     <ImageButton
         android:id="@+id/predictBtn"
         android:layout_width="170dp"
@@ -103,6 +106,7 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/predict_button"
         tools:srcCompat="@drawable/predict_button" />
+-->
 
 
 
