@@ -3,6 +3,7 @@ package com.example.ricedoc;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
@@ -30,7 +31,7 @@ public class mainpageActivity extends AppCompatActivity {
 
     private Bitmap bitmap;
     private ImageView imageView;
-    private ImageButton captureBtn, galleryBtn;
+    private CardView captureBtn, galleryBtn;
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -67,8 +68,8 @@ public class mainpageActivity extends AppCompatActivity {
 
 
         getPermission();
-        captureBtn = (ImageButton) findViewById(R.id.captureBtn);
-        galleryBtn = (ImageButton) findViewById(R.id.galleryBtn);
+        captureBtn = (CardView) findViewById(R.id.captureBtn);
+        galleryBtn = (CardView) findViewById(R.id.galleryBtn);
         /*predictBtn = (ImageButton) findViewById(R.id.predictBtn);*/
         imageView = findViewById(R.id.imageView);
 
