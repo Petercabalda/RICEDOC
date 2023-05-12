@@ -25,14 +25,12 @@
         app:itemTextColor="#52B91D"
         app:menu="@menu/bottom_menu" />
 
-  <!--  <ImageView
+    <ImageView
         android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="280dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/textlogo"
-        android:background="#EDEDED"
-        android:contentDescription="@string/imagedisplay" />-->
+        android:layout_width="1sp"
+        android:layout_height="1sp"
+        android:background="#E1FDD2"
+         />
 
     <ImageView
         android:id="@+id/textlogo"
