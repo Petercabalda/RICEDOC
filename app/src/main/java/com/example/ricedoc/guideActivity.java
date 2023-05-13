@@ -2,6 +2,7 @@ package com.example.ricedoc;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,9 +14,9 @@ import android.view.WindowManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class guideActivity extends AppCompatActivity {
+public class guideActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+private CardView Card1;
 
     private BottomNavigationView bottomNavigationView;
     @SuppressLint("MissingInflatedId")
@@ -27,8 +28,12 @@ public class guideActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_guide);
 
+        Card1 = (CardView) findViewById(R.id.card1);
+        Card1.setOnClickListener((View.OnClickListener)this);
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
 
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -55,5 +60,17 @@ public class guideActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onClick(View v) {
+      Intent i;
+
+      switch (v.getId()){
+          case R.id.card1:
+              i = new Intent(this,Card1.class);
+              startActivity(i);
+              break;
+      }
     }
 }

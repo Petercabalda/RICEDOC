@@ -145,72 +145,7 @@
                     android:textColor="#52B91D"
                     android:textSize="20dp"
                     android:textStyle="bold" />
-
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
-
     </GridLayout>
-    <!-- Camera Button -->
-   <!-- <ImageButton
-        android:id="@+id/captureBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/baseline_camera_alt_24"
-        tools:srcCompat="@drawable/baseline_camera_alt_24"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/capture"
-        android:cropToPadding="false"
-        android:scaleType="fitCenter"
-        android:text="Capture"
-        android:textColor="#FFFFFF"
-        android:layout_below="@+id/textlogo"
-        android:layout_centerHorizontal="true"/>-->
-
-        <!-- Gallery Button -->
-       <!-- <ImageButton
-            android:id="@+id/galleryBtn"
-            android:layout_width="170dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/gallery"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_baseline_image_24"
-            tools:srcCompat="@drawable/ic_baseline_image_24"
-            android:layout_below="@+id/captureBtn"/>-->
-
-
-
-
-
-
-
-
-
-
-    <!-- Predict Button -->
-<!--
-    <ImageButton
-        android:id="@+id/predictBtn"
-        android:layout_width="170dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/galleryBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/predict"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/predict_button"
-        tools:srcCompat="@drawable/predict_button" />
--->
-
-
-
 </RelativeLayout>

@@ -70,21 +70,7 @@ public class mainpageActivity extends AppCompatActivity {
         getPermission();
         captureBtn = (CardView) findViewById(R.id.captureBtn);
         galleryBtn = (CardView) findViewById(R.id.galleryBtn);
-        /*predictBtn = (ImageButton) findViewById(R.id.predictBtn);*/
         imageView = findViewById(R.id.imageView);
-
-
-      /*  predictBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (bitmap != null) {
-                    Intent intent = new Intent(mainpageActivity.this, loadingscreenActivity.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(mainpageActivity.this, "Please select an image first", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });*/
 
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
