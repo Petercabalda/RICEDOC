@@ -126,6 +126,7 @@
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             android:background="#4CAF50"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
