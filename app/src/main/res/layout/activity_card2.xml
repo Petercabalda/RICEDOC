@@ -49,7 +49,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:layout_constraintVertical_bias="0.135"
-            android:src="@drawable/riceseeds" />
+            android:src="@drawable/uma" />
 
         <TextView
             android:id="@+id/textView3"

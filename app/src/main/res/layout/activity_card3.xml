@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="15dp"
-            android:text="'Gamit sa rekomendation matang sa Certified seeds'"
+            android:text="'A. Ipahigayon ang dungan nga pagtanum human makapahulay ang yuta'"
             android:textColor="@color/green"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:layout_constraintVertical_bias="0.135"
-            android:src="@drawable/riceseeds" />
+            android:src="@drawable/pagtanum" />
 
         <TextView
             android:id="@+id/textView3"
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Ang Binhi sa mas gipalambo nga matang sa humay nga sertipikado sa 'National Seed Quality Control Services'(NCSQCS) ma-ilhan o mapamatud-an kini pinaagi sa asul nga tarheta (tag) nga nasukip o gipalit sa sako. Mahimo usab nga mogamit sa 'Foundation o registered seeds' gikan sa masaligan nga mga ahensya sama sa PhilRice ug mga akreditadong magbibinhi"
+            android:text="Kinahanglan nga papahulayon ang basakan og mga 30 ka adlaw o labaw pa. Kianahanglan usab nga kini matamnam sulod sa 14 ka adlaw, sa dili pa, ug sa tapos na, matamnamn ang kasagarang basakan nga nahisakop sa irigasyon. "
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
-            android:text="Mga kinaiya sa sertipikasyong binhi"
+            android:text="Kamahinungdanon"
             android:textColor="@color/green"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="•Limpyo og walay sagol o puro. \n•Tibook o parehas ang porma ug gidagkuon sa mga lugas. \n•85 porsyento o labaw pa ang 'germination rate' o gidaghanon sa moturok."
+            android:text="Pinaagi sa dungan nga pagtanum, malikayan ang mapadayonon nga pagsanay o padaghan sa mga dangan ug sakit sa humay. Ang usa ka bulan nga nagpapahulay sa basakan makaputol sa 'life cycle' sa mga dangan o insekto ug makahimo'g kadaut sa mga pinuy-anan sa sakit. Hinuon, ang pagpapahulay sa basakan, magdepende sa gidaghanon sa tubig irigasyon sa usa ka lugar o kumunidad."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
-            android:text="Kamahinungdanon"
+            android:text="Mga Rekomendasyon"
             android:textColor="@color/green"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Ang paggamit sa sertipikadong binhi moresulta sa himsong nga mga tagod nga paspas ug tupong ang pagtubo. Makatabang kini sa pagpadugang sa abot sa humay og mga 5-10 porsyento."
+            android:text="•Papahulaya o ayaw tamni ang basakan sulod sa usa ka bulan o labaw pa, gikan sa pag-ani, hangtud sa sunod nga tingtanum.\n\n•Ipahigayon ang pagtanum ug humay dungan sa tingtanum og humay sa mga kasikbit nga mga humayan sa inyong lugar."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"
@@ -125,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
-            android:text="Mga Rekomendasyon"
+            android:text="B. Kinahanglan adunay igong gidaghanon sa himsong nga mga tagod."
             android:textColor="@color/green"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -135,6 +135,20 @@
 
         <TextView
             android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Ginabalhin-tanum(transplanted)"
+            android:textColor="@color/green"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -144,7 +158,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
 
