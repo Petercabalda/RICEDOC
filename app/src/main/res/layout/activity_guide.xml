@@ -100,7 +100,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Card2"
+                    android:text="Pag-andam sa uma"
                     android:textAlignment="center"
                     android:textColor="#52B91D"
                     android:textStyle="bold" />
@@ -136,7 +136,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Card3"
+                    android:text="Pagtanum"
                     android:textAlignment="center"
                     android:textColor="#52B91D"
                     android:textStyle="bold" />

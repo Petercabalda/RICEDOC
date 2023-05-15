@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_editor_absoluteX="1dp"
+        app:layout_editor_absoluteY="1dp"
+        android:fillViewport="true"
+        >
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Card1">
-
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text="Pagpili sa Binhi"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -105,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:backgroundTint="#00FFFFFF"
-        android:text="Ang paggamit sa sertipikadong binhi moresulta sa himsong nga \nmga tagod nga paspas ug tupong ang pagtubo. Makatabang kini sa pagpadugang sa abot sa humay og mga 5-10 porsyento."
+        android:text="Ang paggamit sa sertipikadong binhi moresulta sa himsong nga mga tagod nga paspas ug tupong ang pagtubo. Makatabang kini sa pagpadugang sa abot sa humay og mga 5-10 porsyento."
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginLeft="15dp"
@@ -132,13 +139,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:backgroundTint="#00FFFFFF"
-        android:text="Gamit sa matang sa hanay nga adunay potensyal nga makahatag og taas nga abot, himalitan sa merkado (sa mga traders/NFA), ug nagpailalum na sa pagsulay ug tanum ('technology demonstration' o adaptability trial') sa inyong \nlugar."
+        android:text="Gamit sa matang sa hanay nga adunay potensyal nga makahatag og taas nga abot, himalitan sa merkado (sa mga traders/NFA), ug nagpailalum na sa pagsulay ug tanum ('technology demonstration' o adaptability trial') sa inyong \nlugar. \n\nMagtanum ug mga matang sa humay nga dali lang mugulang o kadtong makalahutay bisan mahumol sa tubig didto sa mga ubos nga lugar ug sagad gibnabaha panahon sa ting-ulan.\n\nAng mga barayti nga angay itanum ngadto sa ubos nga lugar ug adunay patubig mao ang: PSB Rc10 (Pagsanjan), NSIC Rc130 (Tubigan 3), NSIC Rc152 (Tubigan 10), NSIC Rc134 (Tubigan 4) ug NSIC Rc160 (Tubigan 14).\n\nAlang sa ubos nga lugar nga nagasalig sa tubig-ulan: NSIC Rc192 (Sahod Ulan1), PSB Rc14 (Rio Grande), and PSB Rc68 (Sacobia). Kini nga mga barayti sa humay makasugakod usab sa hulaw. /n/n Alang ngadto sa upland o mga taas nga lugar nga sagad makasinati ug hulaw: PSB Rc80 (Pasig), PSB Rc9 (Apo), and NSIC Rc23 (Katihan)."
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginLeft="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
