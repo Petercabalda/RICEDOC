@@ -58,7 +58,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:src="@drawable/riceseeds" />
 
@@ -95,7 +95,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:src="@drawable/uma" />
 
@@ -132,7 +132,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:src="@drawable/pagtanum" />
 

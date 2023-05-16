@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Gamit sa matang sa hanay nga adunay potensyal nga makahatag og taas nga abot, himalitan sa merkado (sa mga traders/NFA), ug nagpailalum na sa pagsulay ug tanum ('technology demonstration' o adaptability trial') sa inyong \nlugar. \n\nMagtanum ug mga matang sa humay nga dali lang mugulang o kadtong makalahutay bisan mahumol sa tubig didto sa mga ubos nga lugar ug sagad gibnabaha panahon sa ting-ulan.\n\nAng mga barayti nga angay itanum ngadto sa ubos nga lugar ug adunay patubig mao ang: PSB Rc10 (Pagsanjan), NSIC Rc130 (Tubigan 3), NSIC Rc152 (Tubigan 10), NSIC Rc134 (Tubigan 4) ug NSIC Rc160 (Tubigan 14).\n\nAlang sa ubos nga lugar nga nagasalig sa tubig-ulan: NSIC Rc192 (Sahod Ulan1), PSB Rc14 (Rio Grande), and PSB Rc68 (Sacobia). Kini nga mga barayti sa humay makasugakod usab sa hulaw. /n/n Alang ngadto sa upland o mga taas nga lugar nga sagad makasinati ug hulaw: PSB Rc80 (Pasig), PSB Rc9 (Apo), and NSIC Rc23 (Katihan)."
+            android:text="Ipahigayon ang paghulip-tanum sa mga tagud nga nangamatay (sulod sa 7 ka adlaw gikan sa pagbalhin-binhi kinahanglan adunay 150 ka himsog nga tanum, matag usa ka metro-kwadradong luna, samtang ang humayan nga gisabwagan og 80 ka kilong binhi, kinahanglan adunay 300 o labaw pa, ka mga himsog nga tanum, matag usa ka metro-kwadradong luna."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"
@@ -161,6 +161,59 @@
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Kamahinungdanon"
+            android:textColor="@color/green"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Ang himsog nga mga tagod o tanum dali motubo o molabong ug makasarang pakigkompetinsya sa mga sagbot."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Mga Rekomedasyon"
+            android:textColor="@color/green"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="•Paghimo ug taguran nga duol sa tinubdan sa tubig, ug panalipdi kini batok sa mga dangan, labi na batok sa mga langgam, kuhol ug ilaga. Kinahanglan usab nga ang taguran adunay maayong pagkamugna nga kanal aron mapasayon ang pagpahubas sa tubig.\n\n•Alang sa ginasabwag nga binhi. Ang basak andam ng sabwagan og pinaturok nang daan nga binhi human madaro ug mapakaras. Ang mga gisabwag nga binhi kinahanglan panalipdan batok sa mga langgam, kuhol, ilaga ug mga sagbot, subay sa hustong pamaagi sa pagdumala sa mga dangan. Isabwag ang pinaturok na daan nga mga binhi, sa parehas nga gidaghanon, (matag luna), diha sa basak nga maayo ang pagka andam ug pagkapatag "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
