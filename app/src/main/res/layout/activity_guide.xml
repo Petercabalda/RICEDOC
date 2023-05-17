@@ -132,7 +132,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="125dp"
+                    android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:src="@drawable/pagtanum" />
 
@@ -169,14 +169,14 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Card4"
+                    android:text="Pagdumala sa sustansya"
                     android:textAlignment="center"
                     android:textColor="#52B91D"
                     android:textStyle="bold" />
@@ -213,7 +213,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Card5"
+                    android:text="Pagdumala sa Patubig"
                     android:textAlignment="center"
                     android:textColor="#52B91D"
                     android:textStyle="bold" />
