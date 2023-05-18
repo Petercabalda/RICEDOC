@@ -35,9 +35,8 @@
 
             <ImageView
                 android:layout_width="1in"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/white"
                 android:elevation="3dp"
                 android:src="@drawable/riceseeds"/>
 
@@ -63,9 +62,8 @@
 
              <ImageView
                  android:layout_width="1in"
-                 android:layout_height="120dp"
+                 android:layout_height="wrap_content"
                  android:layout_margin="5dp"
-                 android:background="@color/white"
                  android:elevation="3dp"
                  android:src="@drawable/uma"/>
 
@@ -91,9 +89,8 @@
 
              <ImageView
                  android:layout_width="1in"
-                 android:layout_height="120dp"
+                 android:layout_height="wrap_content"
                  android:layout_margin="5dp"
-                 android:background="@color/white"
                  android:elevation="3dp"
                  android:src="@drawable/pagtanum"/>
 
@@ -118,12 +115,11 @@
              app:cardBackgroundColor="@color/white">
 
              <ImageView
-                 android:layout_width="1in"
-                 android:layout_height="1in"
+                 android:layout_width="140dp"
+                 android:layout_height="wrap_content"
                  android:layout_margin="5dp"
-                 android:background="@color/white"
                  android:elevation="3dp"
-                 android:src="@drawable/riceseeds"/>
+                 android:src="@drawable/sustansya"/>
 
              <TextView
                  android:layout_width="match_parent"
@@ -147,11 +143,10 @@
 
              <ImageView
                  android:layout_width="1in"
-                 android:layout_height="1in"
+                 android:layout_height="wrap_content"
                  android:layout_margin="5dp"
-                 android:background="@color/white"
                  android:elevation="3dp"
-                 android:src="@drawable/riceseeds"/>
+                 android:src="@drawable/patubig"/>
 
              <TextView
                  android:layout_width="match_parent"
@@ -175,11 +170,10 @@
 
              <ImageView
                  android:layout_width="1in"
-                 android:layout_height="1in"
+                 android:layout_height="wrap_content"
                  android:layout_margin="5dp"
-                 android:background="@color/white"
                  android:elevation="3dp"
-                 android:src="@drawable/riceseeds"/>
+                 android:src="@drawable/dangan"/>
 
              <TextView
                  android:layout_width="match_parent"
@@ -204,11 +198,10 @@
 
              <ImageView
                  android:layout_width="1in"
-                 android:layout_height="1in"
+                 android:layout_height="wrap_content"
                  android:layout_margin="5dp"
-                 android:background="@color/white"
                  android:elevation="3dp"
-                 android:src="@drawable/riceseeds"/>
+                 android:src="@drawable/ani"/>
 
              <TextView
                  android:layout_width="match_parent"

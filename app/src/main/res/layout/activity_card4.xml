@@ -43,13 +43,13 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:layout_constraintVertical_bias="0.135"
-            android:src="@drawable/riceseeds" />
+            android:src="@drawable/sustansya" />
 
         <TextView
             android:id="@+id/textView3"
@@ -166,7 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="•Suta-a ug ihatag sa tanum ang gikinahanglan niining nitroheno pinasikad sa nabasa sa LCC, ug ingon man usab ang uban pang mga sustansyang gikinahnglan sa humay sumala sa MOET o sa &quot;Nutrient Ommision Plot.&quot;"
+            android:text="•Suta-a ug ihatag sa tanum ang gikinahanglan niining nitroheno pinasikad sa nabasa sa LCC, ug ingon man usab ang uban pang mga sustansyang gikinahnglan sa humay sumala sa MOET o sa &quot;Nutrient Ommision Plot.&quot;\n\n•Nitroheno(N). Gamita ang LCC matag pito ka adlaw gikan sa 14 ka adlaw human og balhin-tanum o mga 21 ka adlaw gikan sa pagsabwag-tanum, hangtud nga kini mobuswak o mamulak na. Apan, nga kung nagsabwag og kumpletong abono o 14-14-14-12S sa ika-14 ka adlaw human sa pagbalhin-tanum, o 21 ka adlaw sa pagsabwag-tanum, ang pagbasa sa LCC kinahanglan sugdan sa ika-21 na ka adlaw human sa pagbalhin-tanum, o sa ika-28 ka adlaw human sa pagsabwag-tanum.\n\n•Posporos(P) ug Potasyum(K). Ang gidaghanon ug matang sa abonong naghupot og Pk ug K, sama sa 14-14-14-12S, 16-20-0, 0-18-0, ug 0-0-60 nga gamiton, mag-agad sa panahon sa pagtanum, matang sa yuta, gitumong nga abot, presyo, ug sa pagkahimalitan niini.\n\n•Sulfur(S). Ang gidaghanon sa sulfur nga anaa sa 14-14-14-12S (12%) nga girekomndar sa Talaan 2 igo na nga makatubag sa Kakulangon sa sulfur.\n\n•Zinc(Zn). Kung kulang sa zinc, gamiti o butangi og 25 ka kilong &quot;zinc sulfate&quot; matag ektarya, sa ika-14 ka adlaw gikan sa pagbalhin-tanum. Usa lamang ka higayon kini himoa sulod usa sa ka tuig. Ang zinc, usa sa matang sa &quot;micronutrient&quot; nga kasagarang kulang diha sa mga basakan. Ang sintomas sa kakulang niini mamatikdan paglabay sa 2-4 ka semana gikan sa pagbalhin-tanum."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"

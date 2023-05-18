@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="• Ayoha ug limpyohi ang mga kanal ug pilapilan.\n• Daruha ang mga sagbot ug inanihan o ginarabahan. Pakasari ng basakan makadauha ka higayon o labaw pa (lat-angi og usa ka semana matag pakaras).\n• Pataga ang yuta."
+            android:text="• Ayoha ug limpyohi ang mga kanal ug pilapilan.\n\n• Daruha ang mga sagbot ug inanihan o ginarabahan. Pakasari ng basakan makadauha ka higayon o labaw pa (lat-angi og usa ka semana matag pakaras).\n\n• Pataga ang yuta."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"
