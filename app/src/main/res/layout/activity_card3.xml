@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Pinaagi sa dungan nga pagtanum, malikayan ang mapadayonon nga pagsanay o padaghan sa mga dangan ug sakit sa humay. Ang usa ka bulan nga nagpapahulay sa basakan makaputol sa 'life cycle' sa mga dangan o insekto ug makahimo'g kadaut sa mga pinuy-anan sa sakit. Hinuon, ang pagpapahulay sa basakan, magdepende sa gidaghanon sa tubig irigasyon sa usa ka lugar o kumunidad."
+            android:text="Pinaagi sa dungan nga pagtanum, malikayan ang mapadayonon nga pagsanay o padaghan sa mga dangan ug sakit sa humay. Ang usa ka bulan nga nagpapahulay sa basakan makaputol sa &quot;life cycle&quot; sa mga dangan o insekto ug makahimo'g kadaut sa mga pinuy-anan sa sakit. Hinuon, ang pagpapahulay sa basakan, magdepende sa gidaghanon sa tubig irigasyon sa usa ka lugar o kumunidad."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"

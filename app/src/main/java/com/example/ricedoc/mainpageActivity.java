@@ -30,8 +30,8 @@ import java.io.IOException;
 public class mainpageActivity extends AppCompatActivity {
 
     private Bitmap bitmap;
-    private ImageView imageView;
     private CardView captureBtn, galleryBtn;
+
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -68,9 +68,8 @@ public class mainpageActivity extends AppCompatActivity {
 
 
         getPermission();
-        captureBtn = (CardView) findViewById(R.id.captureBtn);
-        galleryBtn = (CardView) findViewById(R.id.galleryBtn);
-        imageView = findViewById(R.id.imageView);
+        captureBtn = findViewById(R.id.captureBtn);
+        galleryBtn = findViewById(R.id.galleryBtn);
 
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +88,6 @@ public class mainpageActivity extends AppCompatActivity {
                 startActivityForResult(intent, 12);
             }
         });
-
     }
 
     void getPermission() {
@@ -119,7 +117,6 @@ public class mainpageActivity extends AppCompatActivity {
                 Uri uri = data.getData();
                 try {
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
-                    imageView.setImageBitmap(bitmap);
                     navigateToNextActivity(); // Navigate to the next activity after selecting an image
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -128,7 +125,6 @@ public class mainpageActivity extends AppCompatActivity {
         } else if (requestCode == 12) {
             if (data != null && data.getExtras() != null) {
                 bitmap = (Bitmap) data.getExtras().get("data");
-                imageView.setImageBitmap(bitmap);
                 navigateToNextActivity(); // Navigate to the next activity after capturing an image
             } else {
                 // handle case where user cancelled image capture

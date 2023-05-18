@@ -25,13 +25,13 @@
         app:itemTextColor="#52B91D"
 
         app:menu="@menu/bottom_menu" />
-
+<!--
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="1sp"
         android:layout_height="1sp"
         android:background="#E1FDD2"
-         />
+         />-->
 
     <ImageView
         android:id="@+id/textlogo"
