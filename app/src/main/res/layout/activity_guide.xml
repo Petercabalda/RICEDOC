@@ -87,12 +87,6 @@
              app:cardElevation="5dp"
              app:cardBackgroundColor="@color/white">
 
-             <ImageView
-                 android:layout_width="1in"
-                 android:layout_height="wrap_content"
-                 android:layout_margin="5dp"
-                 android:elevation="3dp"
-                 android:src="@drawable/pagtanum"/>
 
              <TextView
                  android:layout_width="match_parent"
@@ -103,6 +97,13 @@
                  android:textColor="@color/green"
                  android:textSize="23dp"
                  android:textStyle="bold" />
+
+             <ImageView
+                 android:layout_width="1in"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="5dp"
+                 android:elevation="3dp"
+                 android:src="@drawable/pagtanum" />
 
          </androidx.cardview.widget.CardView>
          <androidx.cardview.widget.CardView
@@ -115,7 +116,7 @@
              app:cardBackgroundColor="@color/white">
 
              <ImageView
-                 android:layout_width="140dp"
+                 android:layout_width="1in"
                  android:layout_height="wrap_content"
                  android:layout_margin="5dp"
                  android:elevation="3dp"
