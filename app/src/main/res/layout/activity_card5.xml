@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="•Kinahanglan nga ang giladmon sa tubig sa basakan mga 3.5 sentimetro, gikan sa panahon sa pagpangsipak hangtud mga 1-2 ka semana na dili pa mag-ani. Pahubsi ang mga basakan 1-2 ka semana sa dili pa mag-ani.\n\n•Alang sa mga yuta nga 'galas,' Pahubsi ang basakan mga usa ka semana sa dili pa mag-ani.\n\n•Apan sa mga yuta nga 'lagkitin' o lapokon, ipahigayon ang pagpahubas sa tubig sa basakan mga duha ka semana sa dili pa mag-ani."
+            android:text="•Kinahanglan nga ang giladmon sa tubig sa basakan mga 3.5 sentimetro, gikan sa panahon sa pagpangsipak hangtud mga 1-2 ka semana na dili pa mag-ani. Pahubsi ang mga basakan 1-2 ka semana sa dili pa mag-ani.\n\n•Alang sa mga yuta nga 'galas,' Pahubsi ang basakan mga usa ka semana sa dili pa mag-ani.\n\n•Apan sa mga yuta nga 'lagkitin' o lapokon, ipahigayon ang pagpahubas sa tubig sa basakan mga duha ka semana sa dili pa mag-ani.\n\n"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"

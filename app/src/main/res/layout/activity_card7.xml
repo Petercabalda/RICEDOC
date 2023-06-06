@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Paugahon ang basa nga humay sulod sa 24 oras pagkahuman gi-ani aron malikayan ang pagpangitom niini. Ania ang pipili ka mga pamaagi sa pagpa-uga sa humay: \n\n•Ibulad sa adlaw, o di kaha,\n\n•Muagamit ug mekanikal nga pasilidad sama sa Flat Bed Dryer (FBD) hilabina kung panahon sa ting-ulan. Ang FBD adunay kapasidad nga makapauga ug 120 ka sako sa humay sulod sa 10 hangtod 12 ka oras. KUng mugamit ug FBD, siguradahon nga sundon ang saktong oras sa pagpauga aron dili kini muresulta sa ubos nga kalidad sa mga lugas sa humay."
+            android:text="Paugahon ang basa nga humay sulod sa 24 oras pagkahuman gi-ani aron malikayan ang pagpangitom niini. Ania ang pipili ka mga pamaagi sa pagpa-uga sa humay: \n\n•Ibulad sa adlaw, o di kaha,\n\n•Muagamit ug mekanikal nga pasilidad sama sa Flat Bed Dryer (FBD) hilabina kung panahon sa ting-ulan. Ang FBD adunay kapasidad nga makapauga ug 120 ka sako sa humay sulod sa 10 hangtod 12 ka oras. KUng mugamit ug FBD, siguradahon nga sundon ang saktong oras sa pagpauga aron dili kini muresulta sa ubos nga kalidad sa mga lugas sa humay.\n\n"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"

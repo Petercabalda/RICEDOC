@@ -208,7 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="•Paghimo ug taguran nga duol sa tinubdan sa tubig, ug panalipdi kini batok sa mga dangan, labi na batok sa mga langgam, kuhol ug ilaga. Kinahanglan usab nga ang taguran adunay maayong pagkamugna nga kanal aron mapasayon ang pagpahubas sa tubig.\n\n•Alang sa ginasabwag nga binhi. Ang basak andam ng sabwagan og pinaturok nang daan nga binhi human madaro ug mapakaras. Ang mga gisabwag nga binhi kinahanglan panalipdan batok sa mga langgam, kuhol, ilaga ug mga sagbot, subay sa hustong pamaagi sa pagdumala sa mga dangan. Isabwag ang pinaturok na daan nga mga binhi, sa parehas nga gidaghanon, (matag luna), diha sa basak nga maayo ang pagka andam ug pagkapatag "
+            android:text="•Paghimo ug taguran nga duol sa tinubdan sa tubig, ug panalipdi kini batok sa mga dangan, labi na batok sa mga langgam, kuhol ug ilaga. Kinahanglan usab nga ang taguran adunay maayong pagkamugna nga kanal aron mapasayon ang pagpahubas sa tubig.\n\n•Alang sa ginasabwag nga binhi. Ang basak andam ng sabwagan og pinaturok nang daan nga binhi human madaro ug mapakaras. Ang mga gisabwag nga binhi kinahanglan panalipdan batok sa mga langgam, kuhol, ilaga ug mga sagbot, subay sa hustong pamaagi sa pagdumala sa mga dangan. Isabwag ang pinaturok na daan nga mga binhi, sa parehas nga gidaghanon, (matag luna), diha sa basak nga maayo ang pagka andam ug pagkapatag.\n\n "
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"

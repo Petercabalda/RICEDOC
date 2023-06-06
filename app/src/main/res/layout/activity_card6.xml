@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="•Pili-a nga itanum ang mga matang sa humay nga taas ang resistensya batok sa mga dangan ug sakit nga kasagaran diha sa imong lugar.\n\n•Panalipdi (alagaan) ang mga makatabang o mapuslanon nga mga organismo.\n\n•Ipahigayon ang regular nga pagsusi sa humayan ug sumpoa ang mga dangan sa humay sama sa insekto, sakit, mga sagbot, ilaga, kuhol, ug mga langgam. Labing maayo kung tibook barangay o kumunidad ang magtinabangay sa pagpahigayon niini."
+            android:text="•Pili-a nga itanum ang mga matang sa humay nga taas ang resistensya batok sa mga dangan ug sakit nga kasagaran diha sa imong lugar.\n\n•Panalipdi (alagaan) ang mga makatabang o mapuslanon nga mga organismo.\n\n•Ipahigayon ang regular nga pagsusi sa humayan ug sumpoa ang mga dangan sa humay sama sa insekto, sakit, mga sagbot, ilaga, kuhol, ug mga langgam. Labing maayo kung tibook barangay o kumunidad ang magtinabangay sa pagpahigayon niini.\n\n"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginLeft="15dp"
