@@ -25,7 +25,7 @@ public class loadingscreenActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(loadingscreenActivity.this, description_leafblast.class);
+                Intent intent = new Intent(loadingscreenActivity.this, description_brownspot.class);
                 startActivity(intent);
                 finish();
             }
