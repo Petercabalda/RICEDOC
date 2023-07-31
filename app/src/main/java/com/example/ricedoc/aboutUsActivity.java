@@ -19,9 +19,6 @@ public class aboutUsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_about_us);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -41,11 +38,13 @@ public class aboutUsActivity extends AppCompatActivity {
                         Intent mainIntent = new Intent(aboutUsActivity.this, mainpageActivity.class);
                         mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Add this line
                         startActivity(mainIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
                     case R.id.Guide:
                         Intent guideIntent = new Intent(aboutUsActivity.this, guideActivity.class);
                         guideIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Add this line
                         startActivity(guideIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
                     default:
                         return false;

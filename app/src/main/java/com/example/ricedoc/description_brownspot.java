@@ -14,9 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class description_brownspot extends AppCompatActivity {
 
-    TextView textView;
+    TextView nameDisease;
     TextView confidencelevel;
-    ImageView imageView;
+    ImageView pictureDisease;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +24,15 @@ public class description_brownspot extends AppCompatActivity {
         setContentView(R.layout.description_brownspot);
 
         String result = getIntent().getStringExtra("text");
-        textView = findViewById(R.id.textView);
-        textView.setText(result);
+        nameDisease = findViewById(R.id.textView);
+        nameDisease.setText(result);
 
         // Receive the image data from the Intent
         byte[] byteArray = getIntent().getByteArrayExtra("imageByteArray");
         Bitmap receivedBitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
 
-        imageView = findViewById(R.id.imageView3);
-        imageView.setImageBitmap(receivedBitmap);
+        pictureDisease = findViewById(R.id.imageView3);
+        pictureDisease.setImageBitmap(receivedBitmap);
 
         String conPercentage = getIntent().getStringExtra("confident_key");
         confidencelevel = findViewById(R.id.confidencelevel);
@@ -41,7 +41,8 @@ public class description_brownspot extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-        textView.setText("");
+        nameDisease.setText("");
+        confidencelevel.setText("");
         super.onBackPressed();
     }
 }

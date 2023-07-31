@@ -23,9 +23,6 @@ private CardView Card1, Card2, Card3, Card4, Card5, Card6, Card7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_guide);
 
         Card1 = (CardView) findViewById(R.id.card1);
@@ -61,11 +58,13 @@ private CardView Card1, Card2, Card3, Card4, Card5, Card6, Card7;
                         Intent aboutIntent = new Intent(guideActivity.this, aboutUsActivity.class);
                         aboutIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(aboutIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
                     case R.id.Main:
                         Intent mainIntent = new Intent(guideActivity.this, mainpageActivity.class);
                         mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(mainIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
                     case R.id.Guide:
                         return true;

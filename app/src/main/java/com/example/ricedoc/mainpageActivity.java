@@ -33,8 +33,8 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import com.example.ricedoc.ml.Mobilenetmodel;
-
+import com.example.ricedoc.ml.Testing1;
+import com.example.ricedoc.ml.Testing2;
 public class mainpageActivity extends AppCompatActivity {
 
     private Bitmap bitmap;
@@ -46,9 +46,6 @@ public class mainpageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_mainpage);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -61,6 +58,7 @@ public class mainpageActivity extends AppCompatActivity {
                         Intent aboutUsIntent = new Intent(mainpageActivity.this, aboutUsActivity.class);
                         aboutUsIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(aboutUsIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
                     case R.id.Main:
                         return true;
@@ -68,6 +66,7 @@ public class mainpageActivity extends AppCompatActivity {
                         Intent guideIntent = new Intent(mainpageActivity.this, guideActivity.class);
                         guideIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(guideIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
                     default:
                         return false;
@@ -149,9 +148,9 @@ public class mainpageActivity extends AppCompatActivity {
 //        return preprocessedBitmap;
 //    }
 
-    public void classifyImage(Bitmap resizedBitmap){
+    public void classifyImage(Bitmap resizedBitmap, Bitmap thumbnailBitmap){
         try {
-            Mobilenetmodel model = Mobilenetmodel.newInstance(getApplication());
+            Testing2 model = Testing2.newInstance(getApplication());
 
             // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
@@ -173,7 +172,7 @@ public class mainpageActivity extends AppCompatActivity {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-            Mobilenetmodel.Outputs outputs = model.process(inputFeature0);
+            Testing2.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
             float[] confidences = outputFeature0.getFloatArray();
@@ -189,7 +188,7 @@ public class mainpageActivity extends AppCompatActivity {
             String[] classes = {"Bacterial Leaf Blight", "Brown Spot", "Healthy", "Leaf Blast"};
             String result = classes[maxPos];
             String conPercentage = String.format("%.2f%%", maxConfidence * 100);
-            navigateToNextActivityWithBitmap(resizedBitmap, result, conPercentage);
+            navigateToResultPage(thumbnailBitmap, result, conPercentage);
             model.close();
         } catch (IOException e) {
             // TODO Handle the exception
@@ -208,7 +207,7 @@ public class mainpageActivity extends AppCompatActivity {
                     Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, dimension, dimension);
                     Bitmap resizedBitmap = originalBitmap.createScaledBitmap(originalBitmap, imagesize, imagesize, false);
 
-                    classifyImage(resizedBitmap);
+                    classifyImage(resizedBitmap, thumbnailBitmap);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -221,7 +220,7 @@ public class mainpageActivity extends AppCompatActivity {
                 Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, dimension, dimension);
                 Bitmap resizedBitmap = originalBitmap.createScaledBitmap(originalBitmap, imagesize, imagesize, false);
 
-                classifyImage(resizedBitmap);
+                classifyImage(resizedBitmap, thumbnailBitmap);
             } else {
                 // handle case where user cancelled image capture
                 Toast.makeText(this, "Image capture cancelled", Toast.LENGTH_SHORT).show();
@@ -230,16 +229,46 @@ public class mainpageActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void navigateToNextActivityWithBitmap(Bitmap resizedBitmap, String result, String conPercentage) {
+    private void navigateToResultPage(Bitmap thumbnailBitmap, String result, String conPercentage) {
 
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        resizedBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        thumbnailBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byte[] byteArray = stream.toByteArray();
 
-        Intent intent = new Intent(this, description_brownspot.class);
-        intent.putExtra("imageByteArray", byteArray);
-        intent.putExtra("text", result);
-        intent.putExtra("confident_key", conPercentage);
-        startActivity(intent);
+        if ("Bacterial Leaf Blight".equals(result)) {
+            Intent intent = new Intent(this, description_sheathblight.class);
+            intent.putExtra("imageByteArray", byteArray);
+            intent.putExtra("text", result);
+            intent.putExtra("confident_key", conPercentage);
+
+            // Remove the percentage sign and convert the string to a float
+            float percentageValue = Float.parseFloat(conPercentage.replace("%", ""));
+
+            if (percentageValue == 0.00f) {
+                Toast.makeText(this, "The image is unclear or disease is not available in the system.", Toast.LENGTH_SHORT).show();
+            } else {
+                startActivity(intent);
+            }
+        }
+        else if ("Brown Spot".equals(result)) {
+            Intent intent = new Intent(this, description_brownspot.class);
+            intent.putExtra("imageByteArray", byteArray);
+            intent.putExtra("text", result);
+            intent.putExtra("confident_key", conPercentage);
+            startActivity(intent);
+        } else if ("Healthy".equals(result)) {
+            Intent intent = new Intent(this, description_healthy.class);
+            intent.putExtra("imageByteArray", byteArray);
+            intent.putExtra("text", result);
+            intent.putExtra("confident_key", conPercentage);
+            startActivity(intent);
+
+        } else {
+            Intent intent = new Intent(this, description_leafblast.class);
+            intent.putExtra("imageByteArray", byteArray);
+            intent.putExtra("text", result);
+            intent.putExtra("confident_key", conPercentage);
+            startActivity(intent);
+        }
     }
 }
