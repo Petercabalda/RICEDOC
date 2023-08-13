@@ -33,8 +33,11 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import com.example.ricedoc.ml.Testing1;
-import com.example.ricedoc.ml.Testing2;
+import com.example.ricedoc.ml.Testing4;
+
+import android.util.Log;
+import java.util.Arrays;
+
 public class mainpageActivity extends AppCompatActivity {
 
     private Bitmap bitmap;
@@ -150,16 +153,15 @@ public class mainpageActivity extends AppCompatActivity {
 
     public void classifyImage(Bitmap resizedBitmap, Bitmap thumbnailBitmap){
         try {
-            Testing2 model = Testing2.newInstance(getApplication());
+            Testing4 model = Testing4.newInstance(getApplication());
 
-            // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * imagesize * imagesize * 3);
+            byteBuffer.order(ByteOrder.nativeOrder());
 
             int[] intValues = new int[imagesize * imagesize];
             resizedBitmap.getPixels(intValues, 0, resizedBitmap.getWidth(), 0, 0, resizedBitmap.getWidth(), resizedBitmap.getHeight());
             int pixel = 0;
-            //Iterate over each pixel and extract R, G and B values. Add these values individually to the byte buffer.
             for(int i = 0; i < imagesize; i++){
                 for(int j = 0; j < imagesize;  j++){
                     int val = intValues[pixel++]; //RGB
@@ -172,7 +174,7 @@ public class mainpageActivity extends AppCompatActivity {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-            Testing2.Outputs outputs = model.process(inputFeature0);
+            Testing4.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
             float[] confidences = outputFeature0.getFloatArray();
@@ -185,9 +187,15 @@ public class mainpageActivity extends AppCompatActivity {
                     maxPos = i;
                 }
             }
-            String[] classes = {"Bacterial Leaf Blight", "Brown Spot", "Healthy", "Leaf Blast"};
+            // Log the results
+            Log.d("InferenceResult", "Confidences: " + Arrays.toString(confidences));
+            Log.d("InferenceResult", "Max Confidence: " + maxConfidence);
+            Log.d("InferenceResult", "Max Position: " + maxPos);
+
+            String[] classes = {"Brown Spot","Healthy","Leaf Blast","Sheath Blight","Tungro Virus","Unknown"};
             String result = classes[maxPos];
             String conPercentage = String.format("%.2f%%", maxConfidence * 100);
+
             navigateToResultPage(thumbnailBitmap, result, conPercentage);
             model.close();
         } catch (IOException e) {
@@ -235,40 +243,47 @@ public class mainpageActivity extends AppCompatActivity {
         thumbnailBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byte[] byteArray = stream.toByteArray();
 
-        if ("Bacterial Leaf Blight".equals(result)) {
+        if ("Brown Spot".equals(result)) {
             Intent intent = new Intent(this, description_sheathblight.class);
             intent.putExtra("imageByteArray", byteArray);
             intent.putExtra("text", result);
             intent.putExtra("confident_key", conPercentage);
-
-            // Remove the percentage sign and convert the string to a float
-            float percentageValue = Float.parseFloat(conPercentage.replace("%", ""));
-
-            if (percentageValue == 0.00f) {
-                Toast.makeText(this, "The image is unclear or disease is not available in the system.", Toast.LENGTH_SHORT).show();
-            } else {
-                startActivity(intent);
-            }
+            startActivity(intent);
         }
-        else if ("Brown Spot".equals(result)) {
+        else if ("Healthy".equals(result)) {
             Intent intent = new Intent(this, description_brownspot.class);
             intent.putExtra("imageByteArray", byteArray);
             intent.putExtra("text", result);
             intent.putExtra("confident_key", conPercentage);
             startActivity(intent);
-        } else if ("Healthy".equals(result)) {
+        }
+        else if ("Leaf Blast".equals(result)) {
             Intent intent = new Intent(this, description_healthy.class);
             intent.putExtra("imageByteArray", byteArray);
             intent.putExtra("text", result);
             intent.putExtra("confident_key", conPercentage);
             startActivity(intent);
 
-        } else {
+        }
+        else if ("Sheath Blight".equals(result)){
             Intent intent = new Intent(this, description_leafblast.class);
             intent.putExtra("imageByteArray", byteArray);
             intent.putExtra("text", result);
             intent.putExtra("confident_key", conPercentage);
             startActivity(intent);
+        }
+        else if ("Tungro Virus".equals(result)){
+            Intent intent = new Intent(this, description_leafblast.class);
+            intent.putExtra("imageByteArray", byteArray);
+            intent.putExtra("text", result);
+            intent.putExtra("confident_key", conPercentage);
+            startActivity(intent);
+        }
+        else if ("Unknown".equals(result)){
+            Toast.makeText(this, "The image belongs to an unknown or unclassified class.", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, "The image belongs to an unknown or unclassified class.", Toast.LENGTH_SHORT).show();
         }
     }
 }
